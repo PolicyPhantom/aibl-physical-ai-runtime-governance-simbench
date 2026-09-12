@@ -1,0 +1,72 @@
+{
+  "agent_actual_zone": {
+    "value": "ZONE_A",
+    "source_id": "POSITION-SENSOR-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:2edb44ee420c68594449a7ca0bf23d1dc8a08fa45485cdb0c1ce03473573dd94",
+    "content_sha256": "2edb44ee420c68594449a7ca0bf23d1dc8a08fa45485cdb0c1ce03473573dd94"
+  },
+  "agent_motion_state": {
+    "value": "STATIONARY",
+    "source_id": "MOTION-SENSOR-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:cec8019fb274ad5b321b63cedb3fc791d4625b5c5802d9db30d1852ac4ea9beb",
+    "content_sha256": "cec8019fb274ad5b321b63cedb3fc791d4625b5c5802d9db30d1852ac4ea9beb"
+  },
+  "target_zone_occupancy": {
+    "value": "CLEAR",
+    "source_id": "ZONE-B-SENSOR-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:bf7cc69aa53d4ca327e793ae54aaa30eb164504d716cc1d78c6b4803537d35a7",
+    "content_sha256": "bf7cc69aa53d4ca327e793ae54aaa30eb164504d716cc1d78c6b4803537d35a7"
+  },
+  "route_clearance": {
+    "value": "CLEAR",
+    "source_id": "ROUTE-SENSOR-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:335d3c94c4208df9adc922a2aa32e42f3bd6f67db53d9f798fafa71541b5c329",
+    "content_sha256": "335d3c94c4208df9adc922a2aa32e42f3bd6f67db53d9f798fafa71541b5c329"
+  },
+  "human_proximity_status": {
+    "value": "NONE_DETECTED",
+    "source_id": "PROXIMITY-SENSOR-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:e6b8012986bc2f570010ad4f237912efba8a2a8a689f8435428f0458b328a108",
+    "content_sha256": "e6b8012986bc2f570010ad4f237912efba8a2a8a689f8435428f0458b328a108"
+  },
+  "actuator_readiness": {
+    "value": "READY",
+    "source_id": "ACTUATOR-STATUS-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:760931b5730e08ffdd9f844e83fdfa671e5eca78f8d602ab0b7709298a8acfa1",
+    "content_sha256": "760931b5730e08ffdd9f844e83fdfa671e5eca78f8d602ab0b7709298a8acfa1"
+  },
+  "safety_interlock_status": {
+    "value": "CLEAR",
+    "source_id": "SAFETY-INTERLOCK-01",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 1,
+    "scope": "MOVE / ZONE_B",
+    "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+    "content_identity": "sha256:43d1c0807c8055073626a728216cef726204d290dac34e46a905c5e52cafa288",
+    "content_sha256": "43d1c0807c8055073626a728216cef726204d290dac34e46a905c5e52cafa288"
+  }
+}

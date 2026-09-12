@@ -1,0 +1,32 @@
+{
+  "scenario_id": "P2-03",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [
+    {
+      "case_id": "speed-restrict",
+      "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"HIGH\"}",
+      "governance_context_overrides": {"operating_condition": "LOW_SPEED_ONLY"},
+      "expected": {
+        "parse_status": "VALID",
+        "decision": "RESTRICT",
+        "reason_codes": ["SPEED_RESTRICTION_REQUIRED"],
+        "execution_result": "EXECUTED_WITH_RESTRICTIONS",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "case_id": "speed-restrict-application-unsupported",
+      "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"HIGH\"}",
+      "governance_context_overrides": {"operating_condition": "LOW_SPEED_ONLY"},
+      "restriction_application_supported": false,
+      "expected": {
+        "parse_status": "VALID",
+        "decision": "RESTRICT",
+        "reason_codes": ["SPEED_RESTRICTION_REQUIRED"],
+        "execution_result": "HELD",
+        "final_state": "RUNNING"
+      }
+    }
+  ]
+}

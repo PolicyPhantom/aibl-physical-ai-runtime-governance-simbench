@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aibl:phase3:trusted-manifest:v1",
+  "title": "AIBL Phase 3 Trusted Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_id",
+    "manifest_version",
+    "fixture_set_id",
+    "experiment_scope",
+    "created_before_formal_run",
+    "files"
+  ],
+  "properties": {
+    "manifest_id": {"type": "string", "minLength": 1},
+    "manifest_version": {"const": "1.0"},
+    "fixture_set_id": {"type": "string", "minLength": 1},
+    "experiment_scope": {"type": "string", "minLength": 1},
+    "created_before_formal_run": {"const": true},
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "relative_path",
+          "role",
+          "size_bytes",
+          "sha256",
+          "content_identity"
+        ],
+        "properties": {
+          "relative_path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+          },
+          "role": {"type": "string", "minLength": 1},
+          "size_bytes": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "content_identity": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

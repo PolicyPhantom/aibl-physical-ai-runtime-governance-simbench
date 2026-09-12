@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aibl:phase3:scenario-result:v1",
+  "title": "AIBL Phase 3 Single Scenario Result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "raw_sha256",
+    "perturbation_identity",
+    "adapter",
+    "normalized_proposal",
+    "governance",
+    "verification",
+    "enforcement",
+    "command_status",
+    "physical_result",
+    "physical_action_count",
+    "receipt_present",
+    "initial_state",
+    "final_state",
+    "followup",
+    "decision_basis",
+    "decision_identity"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^P3-(?:CTRL|[A-E])-\\d{2}$"
+    },
+    "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "perturbation_identity": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "formal_session_id": {"type": "string"},
+    "case_batch_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "attempt_number": {"type": "integer"},
+    "execution_timestamp": {"type": "string"},
+    "absolute_evidence_path": {"type": "string"},
+    "adapter": {"type": "object"},
+    "normalized_proposal": {"type": ["object", "null"]},
+    "governance": {"oneOf": [{"type": "object"}, {"const": "NOT_PERFORMED"}]},
+    "verification": {"type": ["object", "null"]},
+    "enforcement": {"type": "string"},
+    "command_status": {"type": ["string", "null"]},
+    "physical_result": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "command_status",
+            "command_issued_at_tick",
+            "expected_state",
+            "actual_state",
+            "verification_tick",
+            "event",
+            "execution_result",
+            "initial_state",
+            "final_state",
+            "physical_action_count"
+          ],
+          "properties": {
+            "command_status": {"const": "ISSUED"},
+            "command_issued_at_tick": {"const": 1000},
+            "expected_state": {"type": ["string", "null"]},
+            "actual_state": {"type": ["string", "null"]},
+            "verification_tick": {"const": 1001},
+            "event": {"type": ["string", "null"]},
+            "execution_result": {"type": "string"},
+            "initial_state": {"enum": ["RUNNING", "SUSPENDED"]},
+            "final_state": {"enum": ["RUNNING", "SUSPENDED"]},
+            "physical_action_count": {"const": 1}
+          }
+        }
+      ]
+    },
+    "physical_action_count": {"type": "integer", "minimum": 0, "maximum": 1},
+    "receipt_present": {"type": "boolean"},
+    "initial_state": {"enum": ["RUNNING", "SUSPENDED"]},
+    "final_state": {"enum": ["RUNNING", "SUSPENDED"]},
+    "followup": {"type": ["object", "null"]},
+    "decision_basis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario_contract_identity",
+        "fixture_identities",
+        "evaluation_stage",
+        "evaluated_input",
+        "evaluated_input_identity"
+      ],
+      "properties": {
+        "scenario_contract_identity": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "fixture_identities": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "evaluation_stage": {
+          "enum": ["ADAPTER", "ACTION_GOVERNANCE", "REENTRY_GOVERNANCE"]
+        },
+        "evaluated_input": {"type": "object"},
+        "evaluated_input_identity": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"evaluation_stage": {"const": "ADAPTER"}},
+            "required": ["evaluation_stage"]
+          },
+          "then": {
+            "properties": {
+              "evaluated_input": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["raw_proposal_hex"],
+                "properties": {
+                  "raw_proposal_hex": {
+                    "type": "string",
+                    "pattern": "^(?:[0-9a-f]{2})*$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"evaluation_stage": {"const": "ACTION_GOVERNANCE"}},
+            "required": ["evaluation_stage"]
+          },
+          "then": {
+            "properties": {
+              "evaluated_input": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "proposal",
+                  "context",
+                  "physical_observations",
+                  "tick",
+                  "followup_evaluation"
+                ],
+                "properties": {
+                  "proposal": {"type": "object"},
+                  "context": {"type": "object"},
+                  "physical_observations": {"type": "object"},
+                  "tick": {"const": 1000},
+                  "followup_evaluation": {
+                    "oneOf": [
+                      {"type": "null"},
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "proposal",
+                          "context",
+                          "physical_observations",
+                          "tick"
+                        ],
+                        "properties": {
+                          "proposal": {"type": "object"},
+                          "context": {"type": "object"},
+                          "physical_observations": {"type": "object"},
+                          "tick": {"const": 1000}
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"evaluation_stage": {"const": "REENTRY_GOVERNANCE"}},
+            "required": ["evaluation_stage"]
+          },
+          "then": {
+            "properties": {
+              "evaluated_input": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["bundle", "tick"],
+                "properties": {
+                  "bundle": {"type": "object"},
+                  "tick": {"const": 1000}
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "decision_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

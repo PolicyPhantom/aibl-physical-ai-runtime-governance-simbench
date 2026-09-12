@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "request_type": {
+      "type": "string"
+    },
+    "behavior": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "speed": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_type",
+    "behavior",
+    "target",
+    "speed"
+  ],
+  "additionalProperties": false
+}

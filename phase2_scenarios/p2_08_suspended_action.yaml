@@ -1,0 +1,17 @@
+{
+  "scenario_id": "P2-08",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "suspended-action-hold",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"NORMAL\"}",
+    "governance_context_overrides": {"operational_state": "SUSPENDED"},
+    "expected": {
+      "parse_status": "VALID",
+      "decision": "HOLD",
+      "reason_codes": ["OPERATIONAL_STATE_SUSPENDED_REQUIRES_REENTRY"],
+      "execution_result": "HELD",
+      "final_state": "SUSPENDED"
+    }
+  }]
+}

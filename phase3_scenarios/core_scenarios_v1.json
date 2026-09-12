@@ -1,0 +1,162 @@
+{
+  "registry_id": "P3-CORE-SCENARIOS-v1",
+  "version": "1.0",
+  "formal_execution": false,
+  "cases": [
+    {
+      "scenario_id": "P3-CTRL-01",
+      "proposal_fixture": "action_valid",
+      "initial_state": "RUNNING",
+      "primary_delta": "NONE",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "ALLOW",
+        "reason": "ALL_CURRENT_CONDITIONS_SATISFIED",
+        "physical_result": "MOVED_TO_ZONE_B",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-CTRL-02",
+      "proposal_fixture": "reentry_valid",
+      "initial_state": "SUSPENDED",
+      "primary_delta": "NONE",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "ALLOW",
+        "reason": "ALL_CURRENT_REENTRY_CONDITIONS_SATISFIED",
+        "physical_result": null,
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-A-01",
+      "proposal_fixture": "duplicate_key",
+      "initial_state": "RUNNING",
+      "primary_delta": "SECOND_TARGET_OCCURRENCE",
+      "expected": {
+        "adapter": "INVALID",
+        "reason": "LLM_OUTPUT_DUPLICATE_KEY",
+        "governance": "NOT_PERFORMED",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-A-02",
+      "proposal_fixture": "unsupported_value",
+      "initial_state": "RUNNING",
+      "primary_delta": "SPEED_NORMAL_TO_TURBO",
+      "expected": {
+        "adapter": "INVALID",
+        "reason": "LLM_OUTPUT_UNSUPPORTED_VALUE",
+        "governance": "NOT_PERFORMED",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-B-01",
+      "proposal_fixture": "action_valid",
+      "initial_state": "RUNNING",
+      "primary_delta": "AUTHORITY_VALID_UNTIL_1100_TO_1000",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "HOLD",
+        "reason": "CURRENT_AUTHORITY_STALE",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-B-02",
+      "proposal_fixture": "action_valid",
+      "initial_state": "RUNNING",
+      "primary_delta": "EQUAL_AUTHORITY_RISK_CONFLICT",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "HOLD",
+        "reason": "RISK_CONTEXT_CONFLICT_UNRESOLVED",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-C-01",
+      "proposal_fixture": "reentry_valid",
+      "initial_state": "SUSPENDED",
+      "primary_delta": "DECISION_RECEIPT_MISSING",
+      "expected": {
+        "adapter": "VALID",
+        "verification": "INCOMPLETE",
+        "verification_reason": "DECISION_RECEIPT_MISSING",
+        "decision": "HOLD",
+        "reason": "CURRENT_EVIDENCE_NOT_VERIFIED",
+        "final_state": "SUSPENDED"
+      }
+    },
+    {
+      "scenario_id": "P3-C-02",
+      "proposal_fixture": "reentry_valid",
+      "initial_state": "SUSPENDED",
+      "primary_delta": "DECISION_RECEIPT_HASH_MISMATCH",
+      "expected": {
+        "adapter": "VALID",
+        "verification": "INTEGRITY_FAILURE",
+        "verification_reason": "DECISION_RECEIPT_HASH_MISMATCH",
+        "decision": "HOLD",
+        "reason": "CURRENT_EVIDENCE_NOT_VERIFIED",
+        "final_state": "SUSPENDED"
+      }
+    },
+    {
+      "scenario_id": "P3-D-01",
+      "proposal_fixture": "reentry_valid",
+      "initial_state": "SUSPENDED",
+      "primary_delta": "REMEDIATION_OBSERVED_TICK_1000_TO_994",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "HOLD",
+        "reason": "REENTRY_REMEDIATION_EVIDENCE_STALE",
+        "final_state": "SUSPENDED"
+      }
+    },
+    {
+      "scenario_id": "P3-D-02",
+      "proposal_fixture": "reentry_valid",
+      "initial_state": "SUSPENDED",
+      "primary_delta": "RISK_ACCEPTABLE_TO_PROHIBITED",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "DENY",
+        "reason": "CURRENT_RISK_PROHIBITED",
+        "final_state": "SUSPENDED"
+      }
+    },
+    {
+      "scenario_id": "P3-E-01",
+      "proposal_fixture": "action_valid",
+      "initial_state": "RUNNING",
+      "primary_delta": "TARGET_ZONE_OCCUPANCY_ABSENT",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "HOLD",
+        "reason": "TARGET_ZONE_OCCUPANCY_MISSING",
+        "command_status": null,
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "scenario_id": "P3-E-02",
+      "proposal_fixture": "action_valid",
+      "initial_state": "RUNNING",
+      "primary_delta": "ACTUAL_STATE_ZONE_B_TO_ZONE_A_AT_T_VERIFY",
+      "expected": {
+        "adapter": "VALID",
+        "decision": "ALLOW",
+        "reason": "ALL_CURRENT_CONDITIONS_SATISFIED",
+        "command_status": "ISSUED",
+        "physical_result": "EFFECT_MISMATCH",
+        "event": "PHYSICAL_STATE_MISMATCH_DETECTED",
+        "followup_decision": "DENY",
+        "final_state": "SUSPENDED"
+      }
+    }
+  ]
+}

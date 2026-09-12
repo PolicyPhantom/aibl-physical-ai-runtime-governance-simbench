@@ -1,0 +1,15 @@
+{
+  "scenario_id": "P2-06",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "missing-target",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"speed\":\"NORMAL\"}",
+    "expected": {
+      "parse_status": "INVALID",
+      "validation_reason_codes": ["LLM_OUTPUT_MISSING_REQUIRED_FIELD"],
+      "governance_evaluation_status": "NOT_PERFORMED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

@@ -1,0 +1,302 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aibl:p4:derived-input:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "provenance",
+    "wrapper_sha256"
+  ],
+  "properties": {
+    "schema_id": {
+      "type": "string",
+      "const": "P4-DERIVED-INPUT-v1"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "wrapper_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    }
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_path",
+        "old_value",
+        "requested_new_value",
+        "semantic_change_expected"
+      ],
+      "properties": {
+        "field_path": {
+          "type": "string",
+          "enum": [
+            "/context/authority/valid_until_tick",
+            "/bundle/remediation/observed_at_tick",
+            "/context/risk_records/0/observed_at_tick",
+            "/physical_observations/agent_actual_zone/observed_at_tick",
+            "/physical_observations/agent_motion_state/observed_at_tick",
+            "/physical_observations/target_zone_occupancy/observed_at_tick",
+            "/physical_observations/route_clearance/observed_at_tick",
+            "/physical_observations/human_proximity_status/observed_at_tick",
+            "/physical_observations/actuator_readiness/observed_at_tick",
+            "/physical_observations/safety_interlock_status/observed_at_tick"
+          ]
+        },
+        "old_value": {
+          "type": "integer"
+        },
+        "requested_new_value": {
+          "type": "integer"
+        },
+        "semantic_change_expected": {
+          "type": "boolean"
+        }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_payload_path",
+        "dependent_field_path",
+        "recomputation_rule_id"
+      ],
+      "properties": {
+        "source_payload_path": {
+          "type": "string",
+          "enum": [
+            "/physical_observations/agent_actual_zone",
+            "/physical_observations/agent_motion_state",
+            "/physical_observations/target_zone_occupancy",
+            "/physical_observations/route_clearance",
+            "/physical_observations/human_proximity_status",
+            "/physical_observations/actuator_readiness",
+            "/physical_observations/safety_interlock_status"
+          ]
+        },
+        "dependent_field_path": {
+          "type": "string",
+          "enum": [
+            "/physical_observations/agent_actual_zone/content_identity",
+            "/physical_observations/agent_actual_zone/content_sha256",
+            "/physical_observations/agent_motion_state/content_identity",
+            "/physical_observations/agent_motion_state/content_sha256",
+            "/physical_observations/target_zone_occupancy/content_identity",
+            "/physical_observations/target_zone_occupancy/content_sha256",
+            "/physical_observations/route_clearance/content_identity",
+            "/physical_observations/route_clearance/content_sha256",
+            "/physical_observations/human_proximity_status/content_identity",
+            "/physical_observations/human_proximity_status/content_sha256",
+            "/physical_observations/actuator_readiness/content_identity",
+            "/physical_observations/actuator_readiness/content_sha256",
+            "/physical_observations/safety_interlock_status/content_identity",
+            "/physical_observations/safety_interlock_status/content_sha256"
+          ]
+        },
+        "recomputation_rule_id": {
+          "type": "string",
+          "const": "P4-PHYSICAL-RECORD-SHA256-v1"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "path",
+        "raw_sha256"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "enum": [
+            "common_context",
+            "physical_safe",
+            "reentry_current",
+            "action_valid",
+            "reentry_valid"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "enum": [
+            "phase3_scenarios/fixtures/common_context.json",
+            "phase3_scenarios/fixtures/physical_safe.json",
+            "phase3_scenarios/fixtures/reentry_current.json",
+            "phase3_scenarios/fixtures/proposals/action_valid.json",
+            "phase3_scenarios/fixtures/proposals/reentry_valid.json"
+          ]
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        "canonical_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "derived_input_id",
+        "source_baseline_id",
+        "source_baseline_payload_sha256",
+        "source_materials",
+        "derivation_rule_id",
+        "application_targets",
+        "semantic_changed_paths",
+        "dependent_identity_rules",
+        "dependent_identity_changed_paths",
+        "resulting_payload_sha256",
+        "parameter_family",
+        "boundary_class",
+        "logical_evaluation_time"
+      ],
+      "properties": {
+        "derived_input_id": {
+          "type": "string",
+          "enum": [
+            "P4-DERIVED-CTRL-01",
+            "P4-DERIVED-CTRL-02",
+            "P4-DERIVED-AUTH-01",
+            "P4-DERIVED-AUTH-02",
+            "P4-DERIVED-AUTH-03",
+            "P4-DERIVED-REM-01",
+            "P4-DERIVED-REM-02",
+            "P4-DERIVED-REM-03",
+            "P4-DERIVED-PHY-01",
+            "P4-DERIVED-PHY-02",
+            "P4-DERIVED-PHY-03",
+            "P4-DERIVED-RISK-01",
+            "P4-DERIVED-RISK-02",
+            "P4-DERIVED-RISK-03"
+          ]
+        },
+        "source_baseline_id": {
+          "type": "string",
+          "enum": [
+            "P3-CTRL-01",
+            "P3-CTRL-02"
+          ]
+        },
+        "source_baseline_raw_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        "source_baseline_payload_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        "source_materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "uniqueItems": true,
+          "maxItems": 3,
+          "minItems": 2
+        },
+        "derivation_rule_id": {
+          "type": "string",
+          "const": "P4-DERIVATION-RULE-v1"
+        },
+        "application_targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/target"
+          },
+          "uniqueItems": true,
+          "maxItems": 7
+        },
+        "semantic_changed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "/context/authority/valid_until_tick",
+              "/bundle/remediation/observed_at_tick",
+              "/context/risk_records/0/observed_at_tick",
+              "/physical_observations/agent_actual_zone/observed_at_tick",
+              "/physical_observations/agent_motion_state/observed_at_tick",
+              "/physical_observations/target_zone_occupancy/observed_at_tick",
+              "/physical_observations/route_clearance/observed_at_tick",
+              "/physical_observations/human_proximity_status/observed_at_tick",
+              "/physical_observations/actuator_readiness/observed_at_tick",
+              "/physical_observations/safety_interlock_status/observed_at_tick"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 7
+        },
+        "dependent_identity_rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "uniqueItems": true,
+          "maxItems": 14
+        },
+        "dependent_identity_changed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "/physical_observations/agent_actual_zone/content_identity",
+              "/physical_observations/agent_actual_zone/content_sha256",
+              "/physical_observations/agent_motion_state/content_identity",
+              "/physical_observations/agent_motion_state/content_sha256",
+              "/physical_observations/target_zone_occupancy/content_identity",
+              "/physical_observations/target_zone_occupancy/content_sha256",
+              "/physical_observations/route_clearance/content_identity",
+              "/physical_observations/route_clearance/content_sha256",
+              "/physical_observations/human_proximity_status/content_identity",
+              "/physical_observations/human_proximity_status/content_sha256",
+              "/physical_observations/actuator_readiness/content_identity",
+              "/physical_observations/actuator_readiness/content_sha256",
+              "/physical_observations/safety_interlock_status/content_identity",
+              "/physical_observations/safety_interlock_status/content_sha256"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 14
+        },
+        "resulting_payload_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        "parameter_family": {
+          "type": "string",
+          "enum": [
+            "CONTROL",
+            "AUTH",
+            "REM",
+            "PHY",
+            "RISK"
+          ]
+        },
+        "boundary_class": {
+          "type": "string",
+          "enum": [
+            "CONTROL",
+            "STRICT_SIDE",
+            "BOUNDARY",
+            "RELAXED_SIDE"
+          ]
+        },
+        "logical_evaluation_time": {
+          "type": "integer",
+          "const": 1000
+        }
+      }
+    }
+  }
+}

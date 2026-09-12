@@ -1,0 +1,15 @@
+{
+  "scenario_id": "P2-07",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "unknown-speed",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"MAXIMUM_PLUS\"}",
+    "expected": {
+      "parse_status": "INVALID",
+      "validation_reason_codes": ["LLM_OUTPUT_UNRECOGNIZED_VALUE"],
+      "governance_evaluation_status": "NOT_PERFORMED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

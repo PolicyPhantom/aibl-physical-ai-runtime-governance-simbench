@@ -1,0 +1,17 @@
+{
+  "scenario_id": "P2-02",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "human-zone-deny",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"HUMAN_ZONE\",\"speed\":\"NORMAL\"}",
+    "governance_context_overrides": {"human_zone_prohibited": true},
+    "expected": {
+      "parse_status": "VALID",
+      "decision": "DENY",
+      "reason_codes": ["HUMAN_SAFETY_ZONE_PROHIBITED"],
+      "execution_result": "BLOCKED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

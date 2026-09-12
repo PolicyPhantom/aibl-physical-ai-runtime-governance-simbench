@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aibl:phase3:evidence-verification:v1",
+  "title": "AIBL Phase 3 Evidence Verification v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "completeness",
+    "completeness_reason",
+    "present_file_integrity",
+    "integrity_reason",
+    "full_set_integrity",
+    "missing_paths",
+    "mismatched_paths",
+    "unexpected_paths"
+  ],
+  "properties": {
+    "completeness": {"enum": ["COMPLETE", "INCOMPLETE"]},
+    "completeness_reason": {"type": ["string", "null"]},
+    "present_file_integrity": {
+      "enum": ["INTEGRITY_VERIFIED", "INTEGRITY_FAILURE"]
+    },
+    "integrity_reason": {"type": ["string", "null"]},
+    "full_set_integrity": {"enum": ["ESTABLISHED", "NOT_ESTABLISHED"]},
+    "missing_paths": {"type": "array", "items": {"type": "string"}},
+    "mismatched_paths": {"type": "array", "items": {"type": "string"}},
+    "unexpected_paths": {"type": "array", "items": {"type": "string"}}
+  }
+}

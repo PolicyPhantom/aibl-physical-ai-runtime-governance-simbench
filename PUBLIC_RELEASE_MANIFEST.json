@@ -1,0 +1,854 @@
+{
+  "audit_dispositions": {
+    "external_applications_and_weights": "EXCLUDE",
+    "fixed_nonpersonal_protection_constants": "KEEP",
+    "generic_historical_anchor_references": "KEEP",
+    "loopback_endpoints": "KEEP",
+    "private_notions_exports": "EXCLUDE",
+    "synthetic_path_tests": "KEEP"
+  },
+  "canonical_source_commit": "4fd8970cf09474fc076a80b7cc4760437bd2de17",
+  "claim_boundary": "SIMULATION_LIMITED",
+  "excluded_categories": [
+    "Git history and metadata",
+    "untracked and ignored scratch",
+    "private Formal workspace/control/anchor trees",
+    "implementation records",
+    "Temp development records",
+    "private Notion exports",
+    "workstation logs",
+    "LM Studio application/installers",
+    "Gemma weights/GGUF/model binaries",
+    "Phase 2 private live evidence review"
+  ],
+  "excluded_tracked_files": [
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Adjudication_P2-CB-ID-01_20260830.md"
+    },
+    {
+      "category": "PRIVATE_LIVE_EVIDENCE_REVIEW",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Evidence_Review_20260831.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Procedure_Adjudication_PROC-01_to_03_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Procedure_Draft_v0.2_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Procedure_Draft_v0.3_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Procedure_ReReview_Acceptance_and_Freeze_Record_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Formal_Live_Run_Procedure_v1.0_FROZEN_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_P2-CB-ID-01_Codex_Corrective_Instruction_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Post-Fix_Review_Acceptance_and_Formal_Live_Run_Authorization_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_ClassB_Protocol_Freeze_Record_Correction_01_20260830.md"
+    },
+    {
+      "category": "PRIVATE_BASELINE_ATTESTATION_OR_MANIFEST",
+      "path": "AIBL_Phase2_Closed_State_Baseline_Attestation_v1.0_20260902.md"
+    },
+    {
+      "category": "PRIVATE_BASELINE_ATTESTATION_OR_MANIFEST",
+      "path": "AIBL_Phase2_Closed_State_Evidence_Hash_Anchor_v1.0_20260902.tsv"
+    },
+    {
+      "category": "PRIVATE_BASELINE_ATTESTATION_OR_MANIFEST",
+      "path": "AIBL_Phase2_Closed_State_PreGit_Baseline_Manifest_v1.0_20260902.tsv"
+    },
+    {
+      "category": "PRIVATE_BASELINE_ATTESTATION_OR_MANIFEST",
+      "path": "AIBL_Phase2_PreImplementation_Baseline_0831_manifest.json"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Phase2_Structured-Output_Recovery_Implementation_Authorization_and_Codex_Instruction_v1.0_20260902.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Simulation_Bench_Phase2_ClassB_LM_Studio_Bridge_Codex_Implementation_Instruction_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Simulation_Bench_Phase2_ClassB_Live_Observation_Protocol_v1.0_FROZEN_20260830.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Simulation_Bench_Phase2_Codex_Implementation_Instruction_20260828.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "AIBL_Simulation_Bench_Phase2_Codex_Specification_Review_Instruction_20260828.md"
+    },
+    {
+      "category": "PRIVATE_OPERATIONAL_OR_IMPLEMENTATION_INSTRUCTION",
+      "path": "Phase0 _Phase1 _docs/AIBL_Simulation_Bench_Phase1_Codex_Implementation_Instruction_20260827.md"
+    }
+  ],
+  "file_identity_rule": "SHA-256 of exact bytes; ordinal relative POSIX path order",
+  "file_list_count": 139,
+  "files": [
+    {
+      "bytes": 162,
+      "path": ".gitignore",
+      "sha256": "2ab8aca3fd1601ddd223563fcf6438620831867e093fd7a5cada42302f4bbd91"
+    },
+    {
+      "bytes": 17426,
+      "path": "AIBL_Phase2_ClassB_Structured-Output_Recovery_Condition_Addendum_v1.0_FROZEN_20260902.md",
+      "sha256": "7af42c89a12058e0b374d73f8a9372ab94ed692c64a61e8888ac6b1fc7285358"
+    },
+    {
+      "bytes": 38173,
+      "path": "AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_2_Local_LLM_Integration_Frozen_Design_v1.0_20260828.md",
+      "sha256": "48e5c9d80ccfd01be2a9a3dc2766f858044f1195f80bda9f156e4a6f36c40cf8"
+    },
+    {
+      "bytes": 16314,
+      "path": "AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_2_Semantic_Clarification_Addendum_01_20260828.md",
+      "sha256": "27cdd2abd352fcebb087ce424a053ca886513a52b541ca97aef5e0ddbb9d51e0"
+    },
+    {
+      "bytes": 4124,
+      "path": "AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_2_Semantic_Clarification_Addendum_02_20260828.md",
+      "sha256": "5b9b7847ef146f6b86f88256fc4c77a938c1fb6284ac249eba7bdb6e5e7fe4c3"
+    },
+    {
+      "bytes": 13318,
+      "path": "AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_2_Semantic_Clarification_Addendum_03_20260829.md",
+      "sha256": "ae6931da063458743bedff7b3ef4ae6bf5cd83a4b534883987260a2817955db6"
+    },
+    {
+      "bytes": 5659,
+      "path": "AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_2_Semantic_Clarification_Addendum_04_20260829.md",
+      "sha256": "b8a7e82055c9bbdba7550737ef6b0e29838eaab70442eab135990e403ef15807"
+    },
+    {
+      "bytes": 631,
+      "path": "CITATION.cff",
+      "sha256": "7273978f25486fd7748cb6bc8c8812826a20039da3de35b0a0735c8594b61a60"
+    },
+    {
+      "bytes": 1068,
+      "path": "LICENSE",
+      "sha256": "a7d6e4d1add2318ba90436c6530bb36f0c575283e56f02e5d62e1d18fe42e7da"
+    },
+    {
+      "bytes": 6001,
+      "path": "PHASE1_FINDINGS.md",
+      "sha256": "ddeb778eddea8d50eaa6a47856257666ac4c8c36a63d72a07e8705ad2c14e37d"
+    },
+    {
+      "bytes": 17759,
+      "path": "PHASE2_FINDINGS.md",
+      "sha256": "234e2899e6bd9ad75cbbc59b46fe18b75a66678663f464bbb4023a0fdf64b2e3"
+    },
+    {
+      "bytes": 19615,
+      "path": "Phase0 _Phase1 _docs/AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_0_Frozen_Design_20260827.md",
+      "sha256": "2d4b446ff1af6a9452b1c7f4dfd332e1f13e742c28a34a06dabb0021ed83cc6f"
+    },
+    {
+      "bytes": 22348,
+      "path": "Phase0 _Phase1 _docs/AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_1_Deterministic_Simulation_Frozen_Design_20260827.md",
+      "sha256": "bb7c5155cc3b2285d07e0ea1fff0acd0d816f228038499f26c87f464c617cbe9"
+    },
+    {
+      "bytes": 10753,
+      "path": "Phase1 _Addendum 01–03/AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_1_Semantic_Clarification_Addendum_01_20260827.md",
+      "sha256": "710dd65b0ee99d3fec75631c87993a89ded7265651f977fa9b0e11d440bb193a"
+    },
+    {
+      "bytes": 9725,
+      "path": "Phase1 _Addendum 01–03/AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_1_Semantic_Clarification_Addendum_02_20260827.md",
+      "sha256": "0b01ca44bb6cb9a166bdb9f0ae3d36d3de8a4024db1a6f321c563e9dbccfb077"
+    },
+    {
+      "bytes": 12358,
+      "path": "Phase1 _Addendum 01–03/AIBL_Physical_AI_Runtime_Governance_Simulation_Bench_Phase_1_Semantic_Clarification_Addendum_03_20260827.md",
+      "sha256": "6b404aa0e9c1f7eaf14a48ff3ed2f907b82520b8c4fc3098a3ae77c2e51a5179"
+    },
+    {
+      "bytes": 6254,
+      "path": "README.md",
+      "sha256": "fe815d1422b870fb249ca534247995b8e64d0e04fa666b5733444bd7550ddcb2"
+    },
+    {
+      "bytes": 3866,
+      "path": "RELEASE_NOTES.md",
+      "sha256": "a8f453fcfe3990e4d2a68ce690bb049c1acf7bc66379812d652b50d99cd21039"
+    },
+    {
+      "bytes": 74,
+      "path": "phase2/__init__.py",
+      "sha256": "f573891e3eeb6b359232852ae48c9866b5981cde5430ca7025278f12ee097124"
+    },
+    {
+      "bytes": 5741,
+      "path": "phase2/adapter.py",
+      "sha256": "655b5761b4c79ae229154c253d3d0ee34f7f86929047c8ef2616d6d5f1407852"
+    },
+    {
+      "bytes": 6637,
+      "path": "phase2/class_b_config.py",
+      "sha256": "70bf37546344ff89d1e88dfadae2b24118e407245eddd5d726b59a86421c725a"
+    },
+    {
+      "bytes": 3035,
+      "path": "phase2/class_b_runner.py",
+      "sha256": "6d9dcab4905ccfd96641bf77329bb86959f6cfd9f9e5c03f3875dcac42eb1be0"
+    },
+    {
+      "bytes": 11792,
+      "path": "phase2/live_runner.py",
+      "sha256": "8ac0fcb357f9b0c60ad21a91725aae23781d146e6beaed8e32657f3e1b03d082"
+    },
+    {
+      "bytes": 5478,
+      "path": "phase2/lmstudio_bridge.py",
+      "sha256": "f4fe35ffd27703e9f90a60be356f80a767c0cc070d9a76f678f5c1af4594aafd"
+    },
+    {
+      "bytes": 3731,
+      "path": "phase2/proposer.py",
+      "sha256": "6e44c46bbe57628525bdd7a159aa0b5b80dec73ca453dd25077607856876c37b"
+    },
+    {
+      "bytes": 5532,
+      "path": "phase2/provenance.py",
+      "sha256": "984a1c26fca5a0064528e15585b1602e268b0e751f869ec54572ead126c220ec"
+    },
+    {
+      "bytes": 6225,
+      "path": "phase2/runner.py",
+      "sha256": "581dd4c182ac3c37deb2a3c6e10492f4f26e0b1a9c19cfeb3a5273b6aa44798d"
+    },
+    {
+      "bytes": 1606,
+      "path": "phase2/scenarios.py",
+      "sha256": "18e0e45ce5386a0bc0ded2318b1c858acea01994acc712939c8e7476b735ab75"
+    },
+    {
+      "bytes": 500,
+      "path": "phase2_scenarios/p2_01_normal_structured_movement.yaml",
+      "sha256": "71b270dd054d58a4c48260e716191fb2971fd00b5b2d8715f09b2b24349f065f"
+    },
+    {
+      "bytes": 570,
+      "path": "phase2_scenarios/p2_02_human_safety_zone.yaml",
+      "sha256": "6f14c421a2ac8356317b3fdf7c0c287fb74cedbe23a9e4d68dd1d69d89727891"
+    },
+    {
+      "bytes": 1161,
+      "path": "phase2_scenarios/p2_03_high_speed_restriction.yaml",
+      "sha256": "c07cfc08bfda51f497dea843f0d47072f3ddaec3253ad62f09bdce46809230e1"
+    },
+    {
+      "bytes": 499,
+      "path": "phase2_scenarios/p2_04_known_behavior_outside_scope.yaml",
+      "sha256": "6c73dab86a52e7de895f7428a1a6a1910e0eefb49fa433a89166d0f03992a515"
+    },
+    {
+      "bytes": 512,
+      "path": "phase2_scenarios/p2_05_wrapped_output.yaml",
+      "sha256": "209d49102fae1c48ef21a92eeaceb13efd292b28c06bcd39b9e4237278abf42c"
+    },
+    {
+      "bytes": 484,
+      "path": "phase2_scenarios/p2_06_missing_required_field.yaml",
+      "sha256": "92aba88b9e5f631a3a1b21cb1d9867a67d90216e7c262e0698cbc50257e0ba5b"
+    },
+    {
+      "bytes": 507,
+      "path": "phase2_scenarios/p2_07_unrecognized_value.yaml",
+      "sha256": "56a06c3f2bec8baf8879c2cd1cb93a3e623b8b9809e0e06a177ed9a11c510b61"
+    },
+    {
+      "bytes": 590,
+      "path": "phase2_scenarios/p2_08_suspended_action.yaml",
+      "sha256": "a0bca688e960e517555993ed336c3e6ee786646b1ba1b842109f85b039cd220a"
+    },
+    {
+      "bytes": 1801,
+      "path": "phase2_scenarios/p2_09_fresh_reentry.yaml",
+      "sha256": "1f6005cb6935758e35fef51f288eab545bae1a878e3b2e707dc1260c2bb3eae8"
+    },
+    {
+      "bytes": 570,
+      "path": "phase2_scenarios/p2_10_deterministic_replay.yaml",
+      "sha256": "a5aef1cd253f2795f3bf566dc7a441139a3e41981e4a770ae5534c83bdde000b"
+    },
+    {
+      "bytes": 352,
+      "path": "phase2_schemas/aibl_phase2_proposal_structural_v1.json",
+      "sha256": "cd85aec773e88efeed35fc627ad2bee9e89824a39b8e74de61fb61fba54620af"
+    },
+    {
+      "bytes": 309,
+      "path": "phase3/__init__.py",
+      "sha256": "98811c4885a1bcdd5bc21ff67ebc32eb9e991c9dcc6989b906ba569329465e9e"
+    },
+    {
+      "bytes": 3359,
+      "path": "phase3/adapter.py",
+      "sha256": "d34dca35e36bb210796ded1a200d31620976afe07c370e9d66a228ed3d253990"
+    },
+    {
+      "bytes": 10566,
+      "path": "phase3/constants.py",
+      "sha256": "fa3439229a250d9524516cacb76709e833d1de44b2f07c16ff70d039139f9fcb"
+    },
+    {
+      "bytes": 9965,
+      "path": "phase3/context.py",
+      "sha256": "32df1df251f42e49ed69191012cfcd70b5d65826f1441a0c01faf788d996678a"
+    },
+    {
+      "bytes": 5510,
+      "path": "phase3/evidence.py",
+      "sha256": "8cb6bdcd9905b305b150d16f4df80a6ac5d4728b7eea99f5de3d782807a0c321"
+    },
+    {
+      "bytes": 10312,
+      "path": "phase3/evidence_writer.py",
+      "sha256": "e04c9d30770628e507f8ad51193f883aec365889e47bd7d6122d6dd9165bb413"
+    },
+    {
+      "bytes": 12823,
+      "path": "phase3/formal_materials.py",
+      "sha256": "f9f833ecdda71f74ba4e144e4cc7a1528e03838e98011be1fc89cfc1921853d8"
+    },
+    {
+      "bytes": 11066,
+      "path": "phase3/formal_preflight.py",
+      "sha256": "d7e99c907f7cd7bf19f8a92a89d04e6a8403ba64e77861e37e917db176d44125"
+    },
+    {
+      "bytes": 14485,
+      "path": "phase3/formal_session.py",
+      "sha256": "7ff125cc6660d92a6812337996d27ff9559bfb534c2ede3f579446cf809dc5a3"
+    },
+    {
+      "bytes": 4040,
+      "path": "phase3/governance.py",
+      "sha256": "fe6e925ddb7ad6751b6ce77bae7c28fc90036ffec785b306f613a46640473160"
+    },
+    {
+      "bytes": 1921,
+      "path": "phase3/identity.py",
+      "sha256": "d9f13d8f2946e1baef02c0e73e83e63e5d9f10fa69eb494eb45010b7635e2678"
+    },
+    {
+      "bytes": 2479,
+      "path": "phase3/models.py",
+      "sha256": "6060bc70db7ccbbe66194f4918116074de5573c8edf0133b9ff1b7f492ad8f08"
+    },
+    {
+      "bytes": 7958,
+      "path": "phase3/physical.py",
+      "sha256": "74d547edd60cd9323211defb5af228cb8b00644d8935001e9eb6361c18fc61e0"
+    },
+    {
+      "bytes": 8718,
+      "path": "phase3/reentry.py",
+      "sha256": "bb7ac19414602c0d80ddd88f255a272413068a819cd85e22a5d5f9553009e6eb"
+    },
+    {
+      "bytes": 2809,
+      "path": "phase3/replay.py",
+      "sha256": "c8b5fecd5804a7fe192642b250d24418abad81bad8215720833c40a00e8787ec"
+    },
+    {
+      "bytes": 25837,
+      "path": "phase3/runner.py",
+      "sha256": "281d9e3bb2f5b4b4ce4b3d9532c741a6ce370cce5ad23a012865f263b9dfe96d"
+    },
+    {
+      "bytes": 13851,
+      "path": "phase3_docs/AIBL_Phase3_Adversarial_Experiment_Matrix_Human_Review_Decision_Record_v1.0_20260902.md",
+      "sha256": "8d81fb893de7ee1677b8ea57c3c2a393108d70b26dcc6ff5ef889f1c1624e627"
+    },
+    {
+      "bytes": 38752,
+      "path": "phase3_docs/AIBL_Phase3_Adversarial_Experiment_Matrix_v0.1.md",
+      "sha256": "4e63f19e7cc85313301a1111b6a492ccae535772c9a985305b1e4d4d2fa18c63"
+    },
+    {
+      "bytes": 29741,
+      "path": "phase3_docs/AIBL_Phase3_Adversarial_Frozen_Design_v1.0.md",
+      "sha256": "405bb8367e9dd68d743e3272006c64a0c678ae2793b9287324fab3acfa6a84bf"
+    },
+    {
+      "bytes": 8711,
+      "path": "phase3_docs/AIBL_Phase3_Core_Scenario_Specification_Human_Review_Decision_Record_v1.0_20260902.md",
+      "sha256": "ab38171eace66eb0de166a4f26d9de01eee2554f482e562d3538d61ac7b5f81a"
+    },
+    {
+      "bytes": 33102,
+      "path": "phase3_docs/AIBL_Phase3_Core_Scenario_Specification_v1.0.md",
+      "sha256": "fa472448817675bc2e6e7fc86072815c34ef55277b2a6c32414129bebd5593a6"
+    },
+    {
+      "bytes": 4769,
+      "path": "phase3_scenarios/core_scenarios_v1.json",
+      "sha256": "8ceb9459ef772d41c9376ccd7311ae301250e3fbe90f74c041e44a92a0cfb515"
+    },
+    {
+      "bytes": 1352,
+      "path": "phase3_scenarios/fixtures/common_context.json",
+      "sha256": "050c9283f4940fe998e38700184c71006bb3b191a3b37e2848ec24ad0a06ac59"
+    },
+    {
+      "bytes": 1016,
+      "path": "phase3_scenarios/fixtures/evidence_fixture_templates.json",
+      "sha256": "f8c30e4b58e49e2ecca72a6ecb82b29d0b2c3bea05085368e1d10cc3e6b0a62b"
+    },
+    {
+      "bytes": 2960,
+      "path": "phase3_scenarios/fixtures/physical_safe.json",
+      "sha256": "0925daaf06af13e049db2de8103282cca05342f8d49cb64aebfd08dcc5244c3b"
+    },
+    {
+      "bytes": 79,
+      "path": "phase3_scenarios/fixtures/proposals/action_valid.json",
+      "sha256": "ba08aa8d968150679a5ed8344064058838d070dad2e9affe606f1bde25ee8645"
+    },
+    {
+      "bytes": 101,
+      "path": "phase3_scenarios/fixtures/proposals/duplicate_key.json",
+      "sha256": "fd2ac3f5f6159fbd9e5c7dd186eadfd4d558d1e221d17c6fa8050b799551c5f5"
+    },
+    {
+      "bytes": 80,
+      "path": "phase3_scenarios/fixtures/proposals/reentry_valid.json",
+      "sha256": "66ab67ddf6e7de124d5585c65470f7c8d3f31d069d0cc860c8125c1af0aba044"
+    },
+    {
+      "bytes": 78,
+      "path": "phase3_scenarios/fixtures/proposals/unsupported_value.json",
+      "sha256": "de89f0be9b226852af4cf484ac6d05aa837b5f39096525e906fab7ee0680a146"
+    },
+    {
+      "bytes": 5640,
+      "path": "phase3_scenarios/fixtures/reentry_current.json",
+      "sha256": "7765e61a26446b61e054e607f62b9e620fb893539d1200d3fe12d140961ed1c6"
+    },
+    {
+      "bytes": 88,
+      "path": "phase3_scenarios/fixtures/source_priority_registry_v1.json",
+      "sha256": "846b4cdba390178119d2201ab3cab5b6f93694db35688f95c780340e9ec85f6e"
+    },
+    {
+      "bytes": 1010,
+      "path": "phase3_schemas/evidence_verification_v1.schema.json",
+      "sha256": "6ee210a017dc67b69e1f5f407a39f13e59429262fbc0ae6fecb681d504c0af2d"
+    },
+    {
+      "bytes": 6739,
+      "path": "phase3_schemas/scenario_result_v1.schema.json",
+      "sha256": "0553935dd28e3a17e8fbe85b556d87df26cff987e069981cfc4fff29021ca03f"
+    },
+    {
+      "bytes": 1482,
+      "path": "phase3_schemas/trusted_manifest_v1.schema.json",
+      "sha256": "0c0c7c74305e559cd9c6a1060c1f82a7ea25733be6ff044981a4a61d65b3688d"
+    },
+    {
+      "bytes": 82,
+      "path": "phase4/__init__.py",
+      "sha256": "84322f8e3bfa95304e433085f85eb668430360ebbc2b15260a56d4060583df73"
+    },
+    {
+      "bytes": 6304,
+      "path": "phase4/boundary.py",
+      "sha256": "9d514398848be67f366302f3e6a1daf93de46668b5df36d76a1c9522d923dbd8"
+    },
+    {
+      "bytes": 13558,
+      "path": "phase4/contracts.py",
+      "sha256": "43b3967c36ec4845f492abcee4b934918b6b7a284da1de844d4a71279e7fdec0"
+    },
+    {
+      "bytes": 12641,
+      "path": "phase4/derivation.py",
+      "sha256": "d2ca1e1bba39ea30bca756ae8df3d4f876d4722be1fb874fbf067053a946a238"
+    },
+    {
+      "bytes": 9073,
+      "path": "phase4/evidence.py",
+      "sha256": "7ae453a1572f963e37bea99a827de8c955b5bf68c5399751023d81f98e88fb18"
+    },
+    {
+      "bytes": 13061,
+      "path": "phase4/runner.py",
+      "sha256": "772fd146772c870624b3b9899089b45568315c18b30feba6cde028c2888177ca"
+    },
+    {
+      "bytes": 14316,
+      "path": "phase4/session.py",
+      "sha256": "61ef72f41a458c5638aa18e1103a0bb5924ea473efd0cea2632a80979bc1ef29"
+    },
+    {
+      "bytes": 11692,
+      "path": "phase4/verification.py",
+      "sha256": "2eb74dededce3ba3b52e425f41aa36c518caf94ec0fe49787a4a6095fcb6f433"
+    },
+    {
+      "bytes": 7365,
+      "path": "phase4_scenarios/core_scenarios_v1.json",
+      "sha256": "07498fd6d1d434044e8a2c6fbb922e395927805f6e40e51a4422a3e1f24587b1"
+    },
+    {
+      "bytes": 9931,
+      "path": "phase4_schemas/derived_input_v1.json",
+      "sha256": "6b6b7edebacdf0436b9b43e8c7ca3954151c2eb24dd5600026d451b1ba100f0c"
+    },
+    {
+      "bytes": 426,
+      "path": "prompts/phase2_action_proposal_v1.txt",
+      "sha256": "7eaa51b67809f7e9c1d25f4befc794b98fe9f2cdf31566cee413a7015c1cc305"
+    },
+    {
+      "bytes": 19,
+      "path": "requirements.txt",
+      "sha256": "0a26015b446d1a1e775104f6cf06a029af2aa4814294234faeb1fbebbee2303e"
+    },
+    {
+      "bytes": 854,
+      "path": "scenarios/scenario_01_normal_allow.yaml",
+      "sha256": "9833a12f6bac2cf7a56a7424e1911cb6b5e8348df298c04366146e36acca7e6a"
+    },
+    {
+      "bytes": 854,
+      "path": "scenarios/scenario_02_human_zone_deny.yaml",
+      "sha256": "325fe1852471eecc23829242c4b6d1528d84a69ef35ddc80b22f974d6eba984c"
+    },
+    {
+      "bytes": 840,
+      "path": "scenarios/scenario_03_stale_authority_hold.yaml",
+      "sha256": "d7ca8c65822260da03e699e96801f16cd4c47520312c0c7a2873b934a909cfaf"
+    },
+    {
+      "bytes": 957,
+      "path": "scenarios/scenario_04_speed_restrict.yaml",
+      "sha256": "116b74944b596f3fb0a4864904713713d0b6a9ed598e4137d7345d24ab875391"
+    },
+    {
+      "bytes": 874,
+      "path": "scenarios/scenario_05_suspended_action_hold.yaml",
+      "sha256": "7fd3fecc99f146b80bcbc80070c80a37238a20c897f0a9a82b7b9426721b7502"
+    },
+    {
+      "bytes": 859,
+      "path": "scenarios/scenario_06_fresh_reentry_allow.yaml",
+      "sha256": "975fc8a26a5ee7bab853cdd115271cd9644026b14fc4923f5bafefc592fa6cbb"
+    },
+    {
+      "bytes": 52,
+      "path": "src/__init__.py",
+      "sha256": "33df0a3b735422486caa16f25612ccc03557ccab4d90b8052dcf63ab617a59a5"
+    },
+    {
+      "bytes": 1741,
+      "path": "src/enforcement.py",
+      "sha256": "af64b718ecbe033a77f2f0e96376674351f5b8d1409b29cb9ae235e38e9bdf59"
+    },
+    {
+      "bytes": 5835,
+      "path": "src/models.py",
+      "sha256": "ee2305859a2e5773a1d1e04d9ccd1c51918823a9c48759073b5b6a65390605d2"
+    },
+    {
+      "bytes": 4393,
+      "path": "src/permission.py",
+      "sha256": "c5aa59b3b8eeb55c8dbc5bd7b162c20940d14e3a875218816e681d60df271744"
+    },
+    {
+      "bytes": 2686,
+      "path": "src/receipts.py",
+      "sha256": "b26f38928158833435f91d8ea3d5fdc395011adaea125b5a86751448a2590fc7"
+    },
+    {
+      "bytes": 2503,
+      "path": "src/runner.py",
+      "sha256": "915dc9a394b3ae721784a59c4b32a927489c0c2b74c016a9c742164270ac8fbc"
+    },
+    {
+      "bytes": 1954,
+      "path": "src/transition.py",
+      "sha256": "940faa267691601897a3f018b625210066ee2a7c688076d9085c6828bc228820"
+    },
+    {
+      "bytes": 1,
+      "path": "tests/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 1420,
+      "path": "tests/helpers.py",
+      "sha256": "cc2474c2daed59d20a594133f7552e716733f3c074f61e0a958ecbae06f29b4a"
+    },
+    {
+      "bytes": 1,
+      "path": "tests/phase2/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 621,
+      "path": "tests/phase2/helpers.py",
+      "sha256": "ef67db411d8d26f2e9d4b2208ed6cee23c8322704696a63d05224535515f9cdc"
+    },
+    {
+      "bytes": 2732,
+      "path": "tests/phase2/test_adapter.py",
+      "sha256": "de46d1963308169a0cf540db72b1f984cdc285316a159cbcf432ab03bb76b788"
+    },
+    {
+      "bytes": 8126,
+      "path": "tests/phase2/test_corrective_addendum_03.py",
+      "sha256": "1a4c32c77b913e12f4faac7d06054ce6c90e8369c514173dfe1832e340e41893"
+    },
+    {
+      "bytes": 3275,
+      "path": "tests/phase2/test_corrective_addendum_04.py",
+      "sha256": "09769d3a71744dca2aab007c90ac6aff4d9ebb4ae351deb1d1022a4c97e88433"
+    },
+    {
+      "bytes": 2266,
+      "path": "tests/phase2/test_frozen_scenarios.py",
+      "sha256": "a71f26b7605c833079e0a51588bd5c034c8703d70dfcd38ee161050e09aa576b"
+    },
+    {
+      "bytes": 5801,
+      "path": "tests/phase2/test_invalid_outputs.py",
+      "sha256": "1b0566f5361f656cd14ae70511d0b1720de68ff77968e8ae4b88066a771b7336"
+    },
+    {
+      "bytes": 3576,
+      "path": "tests/phase2/test_live_interface.py",
+      "sha256": "4014531e02c350e4405acb62071b90ec37f3b604154ef393db8247b15c6e1302"
+    },
+    {
+      "bytes": 14698,
+      "path": "tests/phase2/test_lmstudio_bridge.py",
+      "sha256": "baf81a47636a1893699aee4772d832429ed15b2ff902e170343c2dba7e0a6d08"
+    },
+    {
+      "bytes": 5200,
+      "path": "tests/phase2/test_phase1_integration.py",
+      "sha256": "e3c30bf73000e8ebd104beb3ec1a0d81e03b42649356e46ef493da7e53feca2d"
+    },
+    {
+      "bytes": 3207,
+      "path": "tests/phase2/test_provenance.py",
+      "sha256": "e790541b4cabac2cfd66665de8af10c5ffe1176e6125dae5ddbd2050ecf059dd"
+    },
+    {
+      "bytes": 10161,
+      "path": "tests/phase2/test_structured_output_recovery.py",
+      "sha256": "c704d0e1556c341b36403935271246cb275b45f81e6ed0122a3aaf0966495eaf"
+    },
+    {
+      "bytes": 1540,
+      "path": "tests/phase3/test_adapter.py",
+      "sha256": "eb1db9911b6a19c8b1a6eed635cb57a960ea9a7186ae7298a00ba4f0fb01e169"
+    },
+    {
+      "bytes": 4195,
+      "path": "tests/phase3/test_context.py",
+      "sha256": "a8ad813ff06640a0feda811d414daf21ccf6afa7cef8075af403ad9ccad775b4"
+    },
+    {
+      "bytes": 14910,
+      "path": "tests/phase3/test_core_scenarios.py",
+      "sha256": "112c5c35c3106fb86f299854b31b530f9d3f0cf9ea6433f421905285d24c77bb"
+    },
+    {
+      "bytes": 11250,
+      "path": "tests/phase3/test_evidence.py",
+      "sha256": "f26236e0ebf4d481bebdedfbc9b1bff396c2306f392843f50150355e595a8e80"
+    },
+    {
+      "bytes": 12584,
+      "path": "tests/phase3/test_evidence_writer.py",
+      "sha256": "2c6b517bfb5bf7d2d0be9152be92865a4cf345211ec5b4f778ed6d504591f3d2"
+    },
+    {
+      "bytes": 9925,
+      "path": "tests/phase3/test_formal_materials.py",
+      "sha256": "703c1eebac4eb80063abda618ded1a734e44e559466b67cb64914897654a3407"
+    },
+    {
+      "bytes": 9990,
+      "path": "tests/phase3/test_formal_preflight.py",
+      "sha256": "fc9cc6120d9e7e15a9ca7eb268cb4e7fdc3b7ca1190ead262a3b212e4411f76f"
+    },
+    {
+      "bytes": 10829,
+      "path": "tests/phase3/test_formal_session.py",
+      "sha256": "7a7afdb685db2863170722f3fc45294dc12cc08f375fbad941dd3dbd62c659c6"
+    },
+    {
+      "bytes": 4389,
+      "path": "tests/phase3/test_governance.py",
+      "sha256": "61e79bd513d4929e1ab7efada496a76685f08638fe51dff3a8aa26528bcbd6e9"
+    },
+    {
+      "bytes": 1344,
+      "path": "tests/phase3/test_identity.py",
+      "sha256": "390207b3b1d612fcc3630c755aab3e6231bd4557f7d6a11a456880deb5f4ce49"
+    },
+    {
+      "bytes": 4287,
+      "path": "tests/phase3/test_physical.py",
+      "sha256": "d691c363cd48920d2b339bf8ff9338efbf852116536e105caeabf39062c3dfca"
+    },
+    {
+      "bytes": 7744,
+      "path": "tests/phase3/test_protection_boundaries.py",
+      "sha256": "051769b4fa05be0f8c798b2550cb1c3c44f4a7bd49b7c25e45f4e3d9160e3492"
+    },
+    {
+      "bytes": 4151,
+      "path": "tests/phase3/test_reentry.py",
+      "sha256": "66c07f586d0d396b63d649cfddfaf1ac3974d5aded4585e50d4c901a8e88990e"
+    },
+    {
+      "bytes": 5955,
+      "path": "tests/phase3/test_replay.py",
+      "sha256": "a52efec193bb5880834dbf4ee7f941d67c9ed3a8827f876e1e66db287e4c84b1"
+    },
+    {
+      "bytes": 4757,
+      "path": "tests/phase4/test_boundary.py",
+      "sha256": "50d9f1020b6fe94b6ff6c1ff3da4cf3e276b284b7ca2fbdc07c2354d2fb4ec8e"
+    },
+    {
+      "bytes": 18856,
+      "path": "tests/phase4/test_derivation.py",
+      "sha256": "3d400c3c8128a9879da416c0560818ceffd497fc83659c6b86253db322197f26"
+    },
+    {
+      "bytes": 7079,
+      "path": "tests/phase4/test_evidence.py",
+      "sha256": "a1879c7cb3eb8c2a2e8332df9108b2e41c7c1f986f5f037147f78dfb067860fc"
+    },
+    {
+      "bytes": 21071,
+      "path": "tests/phase4/test_governance_bridge.py",
+      "sha256": "eb4b545b8c03ad4bd684583963c977a5ff2f8be92159e48f188a43645d117dda"
+    },
+    {
+      "bytes": 2504,
+      "path": "tests/phase4/test_preflight.py",
+      "sha256": "2f99389be313d4ab4c63c8b9e31c04f7877f9e28f087cc0d959078c128951980"
+    },
+    {
+      "bytes": 9579,
+      "path": "tests/phase4/test_session.py",
+      "sha256": "9e299b8eb2d8972e722f0b066b77325462f89f82a41ee8c99f28af43eb683989"
+    },
+    {
+      "bytes": 3472,
+      "path": "tests/test_corrective_findings.py",
+      "sha256": "341e00ba6dc7612d349b9122176e4c6431016607127a436531820d7ffff3b51f"
+    },
+    {
+      "bytes": 3043,
+      "path": "tests/test_enforcement_consistency.py",
+      "sha256": "2dbcd930ea2db31dbc5bcf4b672f4ff13b5d182b6be3f64f9a72fe86effcebd7"
+    },
+    {
+      "bytes": 2726,
+      "path": "tests/test_freshness_boundaries.py",
+      "sha256": "bf9d7cc13663d4cde13b9ba60d5fbedd62ecf37d9b272dd5afe3208b4b11b17b"
+    },
+    {
+      "bytes": 1328,
+      "path": "tests/test_frozen_scenarios.py",
+      "sha256": "7f4c47ed230f4ed286ba521c8e43e61354027da5607bb70455c7945c7edb3720"
+    },
+    {
+      "bytes": 3653,
+      "path": "tests/test_receipt_reconstruction.py",
+      "sha256": "cefd2d465fa88f993c77d331f173f9431b3b2cbb0fc939aa3b92f02642a6779c"
+    },
+    {
+      "bytes": 3980,
+      "path": "tests/test_semantic_addenda.py",
+      "sha256": "e643f2cb91edacad48ce530f0d80306cbf4d28b3c68740f5704d4c786ae006ba"
+    },
+    {
+      "bytes": 2121,
+      "path": "tests/test_state_request_matrix.py",
+      "sha256": "1b9a13d25fb4952227300525476884078c13e66a81103a83c9dca826644e9f80"
+    }
+  ],
+  "historical_formal_summary": {
+    "cases": 14,
+    "completed_attempts": 42,
+    "new_formal_run_in_rc_build": false,
+    "phase4_status": "CLOSED_ACCEPTED_AS_SUPPLIED_BY_PROJECT_OWNER",
+    "private_evidence_distributed": false,
+    "retries": 0
+  },
+  "license": "MIT",
+  "manifest_self_excluded": true,
+  "manifest_self_exclusion_reason": "This file has no self hash; it is included in the external tree digest and ZIP identity.",
+  "manifest_version": 1,
+  "modified_canonical_files": [
+    {
+      "action": "SANITIZE",
+      "canonical_identity": {
+        "bytes": 10161,
+        "sha256": "238c9d7cb93cf9a20096d2c43b429467761123819e6c347026dcf3c94da91b26"
+      },
+      "path": "README.md",
+      "reason": "Current public overview and release hygiene; runtime/test semantics unchanged"
+    }
+  ],
+  "new_public_files": [
+    "LICENSE",
+    "CITATION.cff",
+    "RELEASE_NOTES.md",
+    "PUBLIC_RELEASE_MANIFEST.json"
+  ],
+  "proposed_release_date": "2026-09-12",
+  "proposed_release_version": "1.0.0",
+  "public_test_summary": {
+    "collected": 614,
+    "errors": 0,
+    "failed": 0,
+    "formal_run": "NOT_RUN",
+    "import_mode": "importlib",
+    "invocations": 1,
+    "loopback_tests": "INCLUDED",
+    "optional_live_runtime": "NOT_INVOKED",
+    "passed": 614,
+    "pytest": "8.4.2",
+    "python": "3.14.3",
+    "skipped": 0
+  },
+  "publication_status": "PRIVATE_CANDIDATE_NOT_PUBLISHED",
+  "release_candidate_version": "1.0.0-rc1",
+  "schema_id": "AIBL-PUBLIC-RELEASE-MANIFEST-v1",
+  "total_release_file_count": 140
+}

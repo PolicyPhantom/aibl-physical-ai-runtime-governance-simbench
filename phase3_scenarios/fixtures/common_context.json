@@ -1,0 +1,51 @@
+{
+  "fixture_id": "P3-COMMON-CONTEXT-001",
+  "evaluation_tick": 1000,
+  "operational_state": "RUNNING",
+  "authority": {
+    "authority_id": "AUTH-P3-001",
+    "status": "VALID",
+    "valid_from_tick": 900,
+    "valid_until_tick": 1100,
+    "revoked": false,
+    "superseded_by": null,
+    "scope_request_type": ["ACTION", "REENTRY"],
+    "scope_behavior": "MOVE",
+    "scope_target": "ZONE_B",
+    "source_id": "AUTHORITY-REGISTRY-01"
+  },
+  "policy": {
+    "policy_id": "P3-POLICY-001",
+    "version": "1.0",
+    "effective_from_tick": 900,
+    "effective_until_tick": 1100,
+    "superseded_by": null,
+    "applicable_behavior": "MOVE",
+    "applicable_target": "ZONE_B",
+    "source_id": "POLICY-REGISTRY-01"
+  },
+  "risk_records": [
+    {
+      "risk_observation_id": "RISK-P3-001",
+      "current_risk_state": "ACCEPTABLE",
+      "observed_at_tick": 1000,
+      "max_age_ticks": 5,
+      "source_id": "RISK-SOURCE-01",
+      "source_authority_rank": 10,
+      "scope": "MOVE / ZONE_B"
+    }
+  ],
+  "oversight": {
+    "oversight_assignment_id": "OVERSIGHT-P3-001",
+    "status": "ACTIVE",
+    "confirmed_at_tick": 1000,
+    "max_age_ticks": 5,
+    "scope": "MOVE / ZONE_B",
+    "source_id": "OVERSIGHT-REGISTRY-01"
+  },
+  "source_priority_registry": {
+    "registry_id": "P3-SOURCE-PRIORITY-REGISTRY-v1",
+    "version": "1.0",
+    "rules": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "template_set_id": "P3-EVIDENCE-FIXTURE-TEMPLATES-v1",
+  "version": "1.0",
+  "template_only": true,
+  "trusted_material": false,
+  "formal_evidence": false,
+  "templates": [
+    {
+      "fixture_set_id": "P3-EVID-FIX-ALLOW-001",
+      "historical_decision": "ALLOW",
+      "historical_reason": "ALL_CURRENT_CONDITIONS_SATISFIED",
+      "required_roles": [
+        "RAW_PROPOSAL",
+        "ADAPTER_RESULT",
+        "CONTEXT_SNAPSHOT",
+        "DECISION_RECEIPT",
+        "ENFORCEMENT_RESULT",
+        "STATE_RESULT"
+      ]
+    },
+    {
+      "fixture_set_id": "P3-EVID-FIX-DENY-001",
+      "historical_decision": "DENY",
+      "historical_reason": "CURRENT_RISK_PROHIBITED",
+      "required_roles": [
+        "RAW_PROPOSAL",
+        "ADAPTER_RESULT",
+        "CONTEXT_SNAPSHOT",
+        "DECISION_RECEIPT",
+        "ENFORCEMENT_RESULT",
+        "STATE_RESULT"
+      ]
+    }
+  ],
+  "notice": "Template definitions only. No Trusted Manifest, anchor, Formal evidence, or evidence tree is created by this package."
+}

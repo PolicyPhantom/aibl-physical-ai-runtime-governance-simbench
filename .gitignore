@@ -1,0 +1,16 @@
+.pytest_cache/
+**/__pycache__/
+**/*.py[cod]
+outputs/
+phase3_evidence/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini

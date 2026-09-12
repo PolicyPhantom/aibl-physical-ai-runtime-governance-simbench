@@ -1,0 +1,15 @@
+{
+  "scenario_id": "P2-05",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "prose-wrapper",
+    "raw_output": "Here is my proposal: {\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"NORMAL\"}",
+    "expected": {
+      "parse_status": "INVALID",
+      "validation_reason_codes": ["LLM_OUTPUT_NOT_JSON"],
+      "governance_evaluation_status": "NOT_PERFORMED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "P2-04",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "lift-outside-move-scope",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"LIFT\",\"target\":\"ZONE_B\",\"speed\":\"NORMAL\"}",
+    "expected": {
+      "parse_status": "VALID",
+      "decision": "DENY",
+      "reason_codes": ["BEHAVIOR_OUTSIDE_SCOPE"],
+      "execution_result": "BLOCKED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

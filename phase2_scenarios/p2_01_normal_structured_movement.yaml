@@ -1,0 +1,16 @@
+{
+  "scenario_id": "P2-01",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [{
+    "case_id": "normal-allow",
+    "raw_output": "{\"request_type\":\"ACTION\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"NORMAL\"}",
+    "expected": {
+      "parse_status": "VALID",
+      "decision": "ALLOW",
+      "reason_codes": ["ALL_CURRENT_CONDITIONS_SATISFIED"],
+      "execution_result": "EXECUTED",
+      "final_state": "RUNNING"
+    }
+  }]
+}

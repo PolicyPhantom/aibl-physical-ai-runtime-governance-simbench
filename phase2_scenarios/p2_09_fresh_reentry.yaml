@@ -1,0 +1,45 @@
+{
+  "scenario_id": "P2-09",
+  "evaluation_time": "2026-08-28T10:00:00+09:00",
+  "run_time": "2026-08-28T10:00:00+09:00",
+  "cases": [
+    {
+      "case_id": "allow-reentry",
+      "raw_output": "{\"request_type\":\"REENTRY\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"NORMAL\"}",
+      "governance_context_overrides": {"operational_state": "SUSPENDED"},
+      "expected": {
+        "parse_status": "VALID",
+        "decision": "ALLOW",
+        "reason_codes": ["REENTRY_REVALIDATION_PASSED"],
+        "execution_result": "EXECUTED",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "case_id": "restricted-reentry-applied",
+      "raw_output": "{\"request_type\":\"REENTRY\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"HIGH\"}",
+      "governance_context_overrides": {"operational_state": "SUSPENDED", "operating_condition": "LOW_SPEED_ONLY"},
+      "restriction_application_supported": true,
+      "expected": {
+        "parse_status": "VALID",
+        "decision": "RESTRICT",
+        "reason_codes": ["SPEED_RESTRICTION_REQUIRED", "REENTRY_REVALIDATION_PASSED"],
+        "execution_result": "EXECUTED_WITH_RESTRICTIONS",
+        "final_state": "RUNNING"
+      }
+    },
+    {
+      "case_id": "restricted-reentry-held",
+      "raw_output": "{\"request_type\":\"REENTRY\",\"behavior\":\"MOVE\",\"target\":\"ZONE_B\",\"speed\":\"HIGH\"}",
+      "governance_context_overrides": {"operational_state": "SUSPENDED", "operating_condition": "LOW_SPEED_ONLY"},
+      "restriction_application_supported": false,
+      "expected": {
+        "parse_status": "VALID",
+        "decision": "RESTRICT",
+        "reason_codes": ["SPEED_RESTRICTION_REQUIRED", "REENTRY_REVALIDATION_FAILED"],
+        "execution_result": "HELD",
+        "final_state": "SUSPENDED"
+      }
+    }
+  ]
+}

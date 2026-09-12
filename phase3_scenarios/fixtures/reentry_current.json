@@ -1,0 +1,160 @@
+{
+  "fixture_id": "P3-REENTRY-CURRENT-001",
+  "normalized_request": {
+    "request_type": "REENTRY",
+    "behavior": "MOVE",
+    "target": "ZONE_B",
+    "speed": "NORMAL"
+  },
+  "authority": {
+    "authority_id": "AUTH-P3-001",
+    "status": "VALID",
+    "valid_from_tick": 900,
+    "valid_until_tick": 1100,
+    "revoked": false,
+    "superseded_by": null,
+    "scope_request_type": [
+      "ACTION",
+      "REENTRY"
+    ],
+    "scope_behavior": "MOVE",
+    "scope_target": "ZONE_B",
+    "source_id": "AUTHORITY-REGISTRY-01"
+  },
+  "policy": {
+    "policy_id": "P3-POLICY-001",
+    "version": "1.0",
+    "effective_from_tick": 900,
+    "effective_until_tick": 1100,
+    "superseded_by": null,
+    "applicable_behavior": "MOVE",
+    "applicable_target": "ZONE_B",
+    "source_id": "POLICY-REGISTRY-01"
+  },
+  "risk_records": [
+    {
+      "risk_observation_id": "RISK-P3-001",
+      "current_risk_state": "ACCEPTABLE",
+      "observed_at_tick": 1000,
+      "max_age_ticks": 5,
+      "source_id": "RISK-SOURCE-01",
+      "source_authority_rank": 10,
+      "scope": "MOVE / ZONE_B"
+    }
+  ],
+  "source_priority_registry": {
+    "registry_id": "P3-SOURCE-PRIORITY-REGISTRY-v1",
+    "version": "1.0",
+    "rules": []
+  },
+  "oversight": {
+    "oversight_assignment_id": "OVERSIGHT-P3-001",
+    "status": "ACTIVE",
+    "confirmed_at_tick": 1000,
+    "max_age_ticks": 5,
+    "scope": "MOVE / ZONE_B",
+    "source_id": "OVERSIGHT-REGISTRY-01"
+  },
+  "operational_physical_conditions": {
+    "operational_condition": "SAFE",
+    "physical_observations": {
+      "agent_actual_zone": {
+        "value": "ZONE_A",
+        "source_id": "POSITION-SENSOR-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:2edb44ee420c68594449a7ca0bf23d1dc8a08fa45485cdb0c1ce03473573dd94",
+        "content_sha256": "2edb44ee420c68594449a7ca0bf23d1dc8a08fa45485cdb0c1ce03473573dd94"
+      },
+      "agent_motion_state": {
+        "value": "STATIONARY",
+        "source_id": "MOTION-SENSOR-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:cec8019fb274ad5b321b63cedb3fc791d4625b5c5802d9db30d1852ac4ea9beb",
+        "content_sha256": "cec8019fb274ad5b321b63cedb3fc791d4625b5c5802d9db30d1852ac4ea9beb"
+      },
+      "target_zone_occupancy": {
+        "value": "CLEAR",
+        "source_id": "ZONE-B-SENSOR-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:bf7cc69aa53d4ca327e793ae54aaa30eb164504d716cc1d78c6b4803537d35a7",
+        "content_sha256": "bf7cc69aa53d4ca327e793ae54aaa30eb164504d716cc1d78c6b4803537d35a7"
+      },
+      "route_clearance": {
+        "value": "CLEAR",
+        "source_id": "ROUTE-SENSOR-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:335d3c94c4208df9adc922a2aa32e42f3bd6f67db53d9f798fafa71541b5c329",
+        "content_sha256": "335d3c94c4208df9adc922a2aa32e42f3bd6f67db53d9f798fafa71541b5c329"
+      },
+      "human_proximity_status": {
+        "value": "NONE_DETECTED",
+        "source_id": "PROXIMITY-SENSOR-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:e6b8012986bc2f570010ad4f237912efba8a2a8a689f8435428f0458b328a108",
+        "content_sha256": "e6b8012986bc2f570010ad4f237912efba8a2a8a689f8435428f0458b328a108"
+      },
+      "actuator_readiness": {
+        "value": "READY",
+        "source_id": "ACTUATOR-STATUS-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:760931b5730e08ffdd9f844e83fdfa671e5eca78f8d602ab0b7709298a8acfa1",
+        "content_sha256": "760931b5730e08ffdd9f844e83fdfa671e5eca78f8d602ab0b7709298a8acfa1"
+      },
+      "safety_interlock_status": {
+        "value": "CLEAR",
+        "source_id": "SAFETY-INTERLOCK-01",
+        "observed_at_tick": 1000,
+        "max_age_ticks": 1,
+        "scope": "MOVE / ZONE_B",
+        "currentness_rule_id": "P3-FRESHNESS-PHYSICAL-001",
+        "content_identity": "sha256:43d1c0807c8055073626a728216cef726204d290dac34e46a905c5e52cafa288",
+        "content_sha256": "43d1c0807c8055073626a728216cef726204d290dac34e46a905c5e52cafa288"
+      }
+    }
+  },
+  "remediation": {
+    "suspension_event_id": "SUSPENSION-P3-001",
+    "resolution_status": "RESOLVED",
+    "observed_at_tick": 1000,
+    "max_age_ticks": 5,
+    "source_id": "REMEDIATION-REVIEW-01",
+    "cause_binding_valid": true
+  },
+  "evidence_verification": {
+    "completeness": "COMPLETE",
+    "completeness_reason": null,
+    "present_file_integrity": "INTEGRITY_VERIFIED",
+    "integrity_reason": null,
+    "full_set_integrity": "ESTABLISHED",
+    "missing_paths": [],
+    "mismatched_paths": [],
+    "unexpected_paths": []
+  },
+  "material_condition_changes": {
+    "suspension_event_id": "SUSPENSION-P3-001",
+    "interval_start_tick": 990,
+    "interval_end_tick": 1000,
+    "reviewed_at_tick": 1000,
+    "material_changes_complete": true,
+    "source_id": "CHANGE-REVIEW-01"
+  },
+  "pre_decision_operational_state": "SUSPENDED"
+}

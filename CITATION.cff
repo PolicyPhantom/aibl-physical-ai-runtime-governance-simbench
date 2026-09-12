@@ -1,0 +1,18 @@
+{
+  "cff-version": "1.2.0",
+  "message": "If you use this software, please cite it using this metadata. This is an unpublished release candidate.",
+  "type": "software",
+  "title": "AIBL Physical AI Runtime Governance — Simulation Bench",
+  "authors": [
+    {
+      "given-names": "Ryoji",
+      "family-names": "Inoue"
+    }
+  ],
+  "version": "1.0.0",
+  "date-released": "2026-09-12",
+  "license": "MIT",
+  "abstract": "A deterministic reference simulation of runtime governance, freshness boundaries, and reconstructable evidence. Claims are simulation-limited."
+}
+# repository-code: PENDING_HUMAN_APPROVAL
+# doi: NOT_ASSIGNED
