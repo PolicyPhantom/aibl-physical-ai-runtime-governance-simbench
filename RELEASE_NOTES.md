@@ -1,8 +1,17 @@
-# Release notes — 1.0.0-rc1
+# Release notes — 1.0.0
 
-Private candidate dated 2026-09-12 for a proposed version 1.0.0 release.
-Canonical source commit: 4fd8970cf09474fc076a80b7cc4760437bd2de17.
-No GitHub release, Zenodo DOI or public announcement has been made by this build.
+Prepared public release version 1.0.0, dated 2026-09-12.
+Canonical research source commit:
+4fd8970cf09474fc076a80b7cc4760437bd2de17
+
+GitHub repository:
+https://github.com/PolicyPhantom/aibl-physical-ai-runtime-governance-simbench
+
+Zenodo DOI (reserved):
+https://doi.org/10.5281/zenodo.22719249
+
+This package is the prepared v1.0.0 release artifact.
+Publication is controlled separately from artifact construction.
 
 ## Phase 1–4 status
 
@@ -11,14 +20,14 @@ Phase 2 supplies strict proposal parsing, provenance, deterministic integration
 and an optional historical local-model bridge. Current public reproduction uses
 fixed inputs; real-LLM integration is deferred for this baseline.
 Phase 3 adds adversarial validation and controlled evidence/session infrastructure.
-Phase 4 is closed / accepted according to the project-owner status supplied for
-RC1. Its first Formal session completed 42/42 attempts across 14 fixed cases,
+Phase 4 is closed / accepted according to the project owner.
+Its first Formal session completed 42/42 attempts across 14 fixed cases,
 three attempts per case, governance call count 42 and retry count 0.
 Post-run verification checked all 42 attempt inventories, expected transitions,
 session inventory bindings and 28 replay comparisons covering all 14 cases.
 
 The Formal summary is an accepted historical result, not a new Formal run in
-this candidate build. Private controls, external anchors and evidence are not
+this artifact construction. Private controls, external anchors and evidence are not
 included and cannot be independently inspected from this source-only package.
 
 ## Public export changes
@@ -51,15 +60,21 @@ of real-world safety, reliability, rare-event rates, production readiness,
 formal verification, patentability or real-time performance.
 Windows filesystem protection and crash tests do not prove elimination of TOCTOU
 or power-loss durability. Same-family reconstruction limits independence.
-Python 3.11+ is documented; this candidate validates only the environment below.
+Python 3.11+ is documented; the carried-forward validation covers only the
+environment below.
 
-## Candidate validation
+## Validation carried forward
 
-Measured on Windows with Python 3.14.3 and pytest 8.4.2:
+Historical RC1 validation, measured on Windows with Python 3.14.3 and pytest 8.4.2:
 614 collected, 614 passed, 0 failed, 0 errors, 0 skipped; pytest exit code 0.
 The complete public suite ran once with importlib mode, plugin autoload disabled,
 cacheprovider disabled and a fresh basetemp outside the release tree. All source,
 test, fixture and schema bytes remained unchanged after the run.
+
+Finalization changed only README.md, CITATION.cff, RELEASE_NOTES.md and
+PUBLIC_RELEASE_MANIFEST.json. The other 136 files are byte-identical to the
+historically validated tree. No tests were rerun during metadata finalization.
+Test result basis: RC1_VALIDATION_CARRIED_FORWARD_METADATA_ONLY_FINALIZATION.
 
 The documented equivalent command is:
 
@@ -69,5 +84,5 @@ python -B -m pytest -q -p no:cacheprovider --import-mode=importlib tests
 
 Loopback-only HTTP tests and deliberate development crash fixtures were included.
 No optional LM Studio/Gemma runtime was invoked; no integration test was silently
-skipped. No external service or new Formal session was invoked by this build.
+skipped. No external service or new Formal session was invoked by that validation.
 Private JUnit/stdout/stderr and temporary test artifacts are outside this archive.

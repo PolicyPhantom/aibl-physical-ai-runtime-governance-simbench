@@ -142,9 +142,9 @@
       "sha256": "b8a7e82055c9bbdba7550737ef6b0e29838eaab70442eab135990e403ef15807"
     },
     {
-      "bytes": 631,
+      "bytes": 721,
       "path": "CITATION.cff",
-      "sha256": "7273978f25486fd7748cb6bc8c8812826a20039da3de35b0a0735c8594b61a60"
+      "sha256": "d059056bb37244dfae1a9a9575bac26ddefcef9bf6bf5dc8070b3e14255bb058"
     },
     {
       "bytes": 1068,
@@ -187,14 +187,14 @@
       "sha256": "6b404aa0e9c1f7eaf14a48ff3ed2f907b82520b8c4fc3098a3ae77c2e51a5179"
     },
     {
-      "bytes": 6254,
+      "bytes": 6548,
       "path": "README.md",
-      "sha256": "fe815d1422b870fb249ca534247995b8e64d0e04fa666b5733444bd7550ddcb2"
+      "sha256": "4253ed7b3ede377d4f5cc1b79831fb12cd8bdf6bd5da0fc21fc681a4406bbaf8"
     },
     {
-      "bytes": 3866,
+      "bytes": 4393,
       "path": "RELEASE_NOTES.md",
-      "sha256": "a8f453fcfe3990e4d2a68ce690bb049c1acf7bc66379812d652b50d99cd21039"
+      "sha256": "ea6d270515d783618cbc5408b1ce4fe4924f9d50e0d3511b82f9306f678965c1"
     },
     {
       "bytes": 74,
@@ -802,6 +802,7 @@
       "sha256": "1b9a13d25fb4952227300525476884078c13e66a81103a83c9dca826644e9f80"
     }
   ],
+  "github_repository_url": "https://github.com/PolicyPhantom/aibl-physical-ai-runtime-governance-simbench",
   "historical_formal_summary": {
     "cases": 14,
     "completed_attempts": 42,
@@ -831,8 +832,6 @@
     "RELEASE_NOTES.md",
     "PUBLIC_RELEASE_MANIFEST.json"
   ],
-  "proposed_release_date": "2026-09-12",
-  "proposed_release_version": "1.0.0",
   "public_test_summary": {
     "collected": 614,
     "errors": 0,
@@ -847,8 +846,11 @@
     "python": "3.14.3",
     "skipped": 0
   },
-  "publication_status": "PRIVATE_CANDIDATE_NOT_PUBLISHED",
-  "release_candidate_version": "1.0.0-rc1",
+  "publication_status": "FINAL_ARTIFACT_PREPARED_NOT_YET_PUBLISHED",
+  "release_date": "2026-09-12",
+  "release_version": "1.0.0",
   "schema_id": "AIBL-PUBLIC-RELEASE-MANIFEST-v1",
-  "total_release_file_count": 140
+  "test_result_basis": "RC1_VALIDATION_CARRIED_FORWARD_METADATA_ONLY_FINALIZATION",
+  "total_release_file_count": 140,
+  "zenodo_doi": "10.5281/zenodo.22719249"
 }

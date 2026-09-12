@@ -1,5 +1,16 @@
 # AIBL Physical AI Runtime Governance — Simulation Bench
 
+Version: 1.0.0
+
+GitHub: https://github.com/PolicyPhantom/aibl-physical-ai-runtime-governance-simbench
+
+Zenodo DOI (reserved): https://doi.org/10.5281/zenodo.22719249
+
+This package is the prepared v1.0.0 release artifact.
+Publication is controlled separately from artifact construction.
+
+Claim boundary: SIMULATION_LIMITED.
+
 A deterministic Python reference simulation of runtime-governance boundaries.
 The bench asks whether an action or state-restoration request is currently
 permissible under explicitly fixed authority, risk, freshness and physical
@@ -14,7 +25,7 @@ evidence. It does not control real equipment.
   Real-LLM integration is deferred for the current public baseline; it is not
   needed to reproduce the deterministic tests.
 - Phase 3: adversarial input/evidence checks and controlled session infrastructure.
-- Phase 4: closed / accepted, as supplied by the project owner for this candidate.
+- Phase 4: closed / accepted, as supplied by the project owner.
   The first Formal session completed 42 of 42 attempts, with zero retries.
 
 The Phase 4 core question is whether frozen governance decisions change as
@@ -31,9 +42,9 @@ project status is summarized here and in RELEASE_NOTES.md.
 
 ## Quick start
 
-Python 3.11 or newer is documented by the project. This candidate's actual test
-environment and result are recorded in RELEASE_NOTES.md; other platforms are not
-claimed to be validated by that result.
+Python 3.11 or newer is documented by the project. The historical validation
+environment and carried-forward result are recorded in RELEASE_NOTES.md; other
+platforms are not claimed to be validated by that result.
 
 From an extracted copy, create an environment if desired and install the test
 requirements through your approved package source:
@@ -105,8 +116,8 @@ redistribution. This project's MIT license does not relicense external products.
 
 The project release material is licensed under the MIT License; see LICENSE.
 Copyright (c) 2026 Ryoji Inoue. Separately acquired dependencies retain their own
-licenses and are not bundled in this candidate.
+licenses and are not bundled in this artifact.
 
-Use CITATION.cff to cite the project. Version 1.0.0 and date 2026-09-12 are release
-candidates. The GitHub URL and Zenodo DOI have not been assigned or approved.
-This private candidate is version 1.0.0-rc1 and is not a published release.
+Use CITATION.cff to cite version 1.0.0, dated 2026-09-12. The GitHub repository
+and reserved Zenodo DOI are listed above. Artifact preparation does not indicate
+that the repository or DOI record has been published.

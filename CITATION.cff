@@ -1,18 +1,19 @@
 {
-  "cff-version": "1.2.0",
-  "message": "If you use this software, please cite it using this metadata. This is an unpublished release candidate.",
-  "type": "software",
-  "title": "AIBL Physical AI Runtime Governance — Simulation Bench",
+  "abstract": "A deterministic reference simulation of runtime governance, freshness boundaries, and reconstructable evidence. Claims are simulation-limited.",
   "authors": [
     {
+      "family-names": "Inoue",
       "given-names": "Ryoji",
-      "family-names": "Inoue"
+      "orcid": "https://orcid.org/0009-0003-7859-7740"
     }
   ],
-  "version": "1.0.0",
+  "cff-version": "1.2.0",
   "date-released": "2026-09-12",
+  "doi": "10.5281/zenodo.22719249",
   "license": "MIT",
-  "abstract": "A deterministic reference simulation of runtime governance, freshness boundaries, and reconstructable evidence. Claims are simulation-limited."
+  "message": "If you use this software, please cite it using this metadata.",
+  "repository-code": "https://github.com/PolicyPhantom/aibl-physical-ai-runtime-governance-simbench",
+  "title": "AIBL Physical AI Runtime Governance — Simulation Bench",
+  "type": "software",
+  "version": "1.0.0"
 }
-# repository-code: PENDING_HUMAN_APPROVAL
-# doi: NOT_ASSIGNED
